@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <title>PERSON ADDRESS FORM</title>
+        <script src="js/validate.js"></script>
+        <script src="js/EmployeePayrollData.js"></script>
+    </head>
+    <body>
+        <header class="header-content header">
+            <div class="logo-content">
+                <img src="assets/images/logo.png" alt="">
+                <div>
+                    <span class="emp-text">EMPLOYEE</span><br>
+                    <span class="emp-text emp-payroll">PAYROLL</span><br>
+                </div>
+            </div>
+        </header>
+        <br>
+        <div class="form-content">
+            <form class="form" action="#" onreset="resetForm()" onsubmit="save(event)">
+                <div class="form-head">
+                    PERSON ADDRESS FORM
+                </div>
+                <div class="row-content">
+                    <label class="label text" for="name">Full Name</label>
+                    <input class="input" type="text" id="name" name="name" required>
+                    <error-output class="text-error" for="text"></error-output>
+                </div>
+                <div class="row-content">
+                    <label class="label text" for="Address">Address</label>
+                    <textarea class="input" name="Address" style="height:50px;"></textarea>
+                </div>
+                <div>
+                    <!--- India states -->
+                    <select id="country-state" name="country-state">
+                            <option value="AN">Andaman and Nicobar Islands</option>
+                            <option value="AP">Andhra Pradesh</option>
+                            <option value="AR">Arunachal Pradesh</option>
+                            <option value="AS">Assam</option>
+                            <option value="BR">Bihar</option>
+                            <option value="CH">Chandigarh</option>
+                            <option value="CT">Chhattisgarh</option>
+                            <option value="DN">Dadra and Nagar Haveli</option>
+                            <option value="DD">Daman and Diu</option>
+                            <option value="DL">Delhi</option>
+                            <option value="GA">Goa</option>
+                            <option value="GJ">Gujarat</option>
+                            <option value="HR">Haryana</option>
+                            <option value="HP">Himachal Pradesh</option>
+                            <option value="JK">Jammu and Kashmir</option>
+                            <option value="JH">Jharkhand</option>
+                            <option value="KA">Karnataka</option>
+                            <option value="KL">Kerala</option>
+                            <option value="LA">Ladakh</option>
+                            <option value="LD">Lakshadweep</option>
+                            <option value="MP">Madhya Pradesh</option>
+                            <option value="MH">Maharashtra</option>
+                            <option value="MN">Manipur</option>
+                            <option value="ML">Meghalaya</option>
+                            <option value="MZ">Mizoram</option>
+                            <option value="NL">Nagaland</option>
+                            <option value="OR">Odisha</option>
+                            <option value="PY">Puducherry</option>
+                            <option value="PB">Punjab</option>
+                            <option value="RJ">Rajasthan</option>
+                            <option value="SK">Sikkim</option>
+                            <option value="TN">Tamil Nadu</option>
+                            <option value="TG">Telangana</option>
+                            <option value="TR">Tripura</option>
+                            <option value="UP">Uttar Pradesh</option>
+                            <option value="UT">Uttarakhand</option>
+                            <option value="WB">West Bengal</option>
+                    </select>
+
+                        <input class="zip" name="zip" type="text" pattern="[0-9]*" placeholder="Zip Code">
+                </div>
+                <div><label for="phone">Enter your phone number:</label>
+
+                    <input type="tel" id="phone" name="phone"
+                           pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                           required>
+                    
+                    <small>Format: 123-456-7890</small></div>
+                <div class="buttonParent">
+                    <div class="add">
+                        <button type="add" class="button add" id="add">Add</button>
+                    </div>
+                    <div class="reset">
+                        <button type="reset" class="button reset" id="reset">Reset</button>
+                    </div>
+                </div> 
+            </form>    
+        </div>  
+    </body>
+</html>
